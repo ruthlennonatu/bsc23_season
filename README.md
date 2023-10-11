@@ -28,10 +28,17 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 
 # Scrum Master
 - Week 4 Scrum Master - Jack Mac Intyre L00158710
+- Week 5 Scrum Master - Andrae Tuliao L00159024 
+- Week 6 Scrum Master - Daniel Gallagher L00158616
+- Week 7 Scrum Master - Shane Mc Shane L00159116
+- Week 8 Scrum Master - Damian Kos L00166003
+- Week 9 Scrum Master - Jakub Piascik L00166413
+- Week 10 Scrum Master - Ivan Bibat L00167791
+- Week 11 Scrum Master - Malachy Mc Innes L00169436
 
 
 # Product Owner
-<name> <number> (Permanent)
+Malachy Mc Innes L00169436 (Permanent)
 
 # Project Deadline
 Refer to BB for deadlines
@@ -43,18 +50,23 @@ Includes at least one self developed api and one webservice
 To be run over <specify platform>
 
 # Frameworks
-We will be using MongoDB for our database
+We will be using SQL for our database
 Database persistence technology
 Define the business Requirements
 Named queries and database triggers for security
 Regex for cleansing and validation of data before sending to the database.
 
+
 # Useful Links
  - Project Slack: https://app.slack.com/client/T0419S2HV9B/C060GTFG3UM
- - GitHub: https://github.com/ruthlennonatu/
+ - GitHub: https://github.dev/ruthlennonatu/bsc23_season
 
-# More Information
-For more information visit our other sections
+# Questions
+Questions for the customer: Club, County, Team, Sport, Country, Reward Suggestions
+Customer Details: Name, Address, Gender (optional), D.O.B, Phone number, Email
+Types of membership: Season pass, Lifetime, Auto Renewal, Payment Options, Discount Code, Children Option, Family Pass
+Clarification of most of the project specification
+
 
 # Section	Description
 Process	Describes the companies process
@@ -111,7 +123,7 @@ The code framework to be used will be Java, we will be programming using the app
     Use Agile methodoligies in the project at all times.
 
 # Meetings
-Stand-ups will occur on Every Thursday/12:30-1:30 during class and Thursday/12:30-1:30 using Automated bot.
+Stand-ups will occur on Every Friday at 1:30 online and at Wednesday between 11:30 - 1:30
 The order that people give their updates will be based starting with the scrum master and going clockwise around the group of those present at the meeting.
 Updates will be in the form: What I've done, Impediments, What I plan to do.
 Sprint planning will occur at the start of class every week at the end of our sprint.
