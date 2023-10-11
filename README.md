@@ -62,11 +62,19 @@ Regex for cleansing and validation of data before sending to the database.
  - GitHub: https://github.dev/ruthlennonatu/bsc23_season
 
 # Questions
-Questions for the customer: Club, County, Team, Sport, Country, Reward Suggestions
-Customer Details: Name, Address, Gender (optional), D.O.B, Phone number, Email
-Types of membership: Season pass, Lifetime, Auto Renewal, Payment Options, Discount Code, Children Option, Family Pass
-Clarification of most of the project specification
-
+- Does the application need to be created for a mobile environment as well as for desktop?
+- What sport does this apply to? GAA or Hurling?
+- Can you clarify what the customer details are: Name, Address, Gender (optional), D.O.B, Phone number, Email?
+- What are the special reward categories?
+- How simple can the prototype be in order to still be a valid outcome?
+- Are there other countries other than Ireland that need to be accounted for?
+- What are the types of Elite Membership, what entails in Elite membership?
+- Is the cost of Season passes different depending on county/club? Or is it the same for all? Ditto for Elite membership.
+- Are there other types of membership: Types of membership: Season pass, Lifetime, Auto Renewal, Payment Options, Discount Code, Children Option, Family Pass
+- Can you give an indication as to what a clean and system system entails? Do you have examples of previous successful projects that fit this criteria?
+- Can you please clarify what the security requirements are?
+- Does the administrator of the end system have full access to all functionality such as create, read, update and delete or only read and edit?
+- Why does the client enter customer details? Does a customer make the bookings themselves or does it require an employee interface?
 
 # Section	Description
 Process	Describes the companies process
