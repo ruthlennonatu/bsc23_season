@@ -27,7 +27,7 @@ This is the online repository for the DevOps Assignment.
 Our product will be delivered using an Agile methodology that embraces the DevOps culture. Please note that our culture embraces change and these documents are treated as living, breathing artefacts that will be continuously updated.
 
 # Scrum Master
-- Week 4 Scrum Master <name> <lnumber>
+- Week 4 Scrum Master Jack Mac Intyre L00158710
 
 
 # Product Owner
