@@ -40,6 +40,16 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 # Product Owner
 Malachy Mc Innes L00169436 (Permanent)
 
+# Rockstars
+* Daniel Gallagher L00158616
+* Jack Mac Intyre L00158710
+* Andrae Tuliao L00159024
+* Shane Mc Shane L00159116
+* Damian Kos L00166003
+* Jakub Piascik L00166413
+* Ivan Bibat L00167791
+* Malachy Mc Innes L00169436
+
 # Project Deadline
 Refer to BB for deadlines
 
