@@ -1,3 +1,5 @@
+//Damian Kos
+
 public class Club {
     private int clubId;
     private String clubName;
