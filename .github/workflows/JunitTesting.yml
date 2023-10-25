@@ -28,8 +28,8 @@ jobs:
 
     #Build the Java Project
     #The mvn clean package command clears the target directory.
-    -name: Build 
-      run: mvn clean package
+    #-name: Build 
+     # run: mvn clean package
 
     #Run Junit Test
     -name: Run JUnit Tests
