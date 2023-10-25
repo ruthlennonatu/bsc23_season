@@ -13,25 +13,25 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu_latest 
+    runs-on: ubuntu-latest 
 
-    #Step to checkout code from the repository
+    # Step to checkout code from the repository
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    #Step to set up the Java Development Kit and specify the version
+    # Step to set up the Java Development Kit and specify the version
     - name: Set up JDK
       uses: actions/setup-java@v1
       with:
         java-version: 11 
 
-    #Build the Java Project
-    #The mvn clean package command clears the target directory.
-    #-name: Build 
-     # run: mvn clean package
+    # Build the Java Project
+    # The mvn clean package command clears the target directory.
+    # - name: Build 
+    #   run: mvn clean package
 
-    #Run Junit Test
-    -name: Run JUnit Tests
-    # Run all the unit test classes.
+    # Run Junit Tests
+    - name: Run JUnit Tests
+      # Run all the unit test classes.
       run: mvn test
