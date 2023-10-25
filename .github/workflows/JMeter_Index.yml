@@ -32,7 +32,7 @@ jobs:
 
 
       - name: Run JMeter performance test
-        uses: apache/actions/jmeter@v1
+        uses: actions/jmeter@v1
         with:
           testPlan: testIndexPage.jmx
           #Customisable Conc Users and duration of test within the workflow
