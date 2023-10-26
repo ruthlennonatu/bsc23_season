@@ -13,6 +13,26 @@ public class User {
     }
     
     public void register() {
-        // Logic to store user data in database
+        String url = "jdbc:mysql://localhost:3306/your_database_name";
+        String user = "your_database_user";
+        String password = "your_database_password";
+
+        String sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+
+        try (Connection connection = DriverManager.getConnection(url, user, password);
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+            preparedStatement.setString(1, this.username);
+            preparedStatement.setString(2, this.email);
+            preparedStatement.setString(3, this.password);
+
+            int rowsAffected = preparedStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("User registered successfully!");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error occurred while registering the user.");
+            e.printStackTrace();
+        }
     }
 }
