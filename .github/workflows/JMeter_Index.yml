@@ -34,6 +34,7 @@ jobs:
       - name: Run JMeter performance test
         uses: apache/actions/jmeter@v1
         with:
+        #Use testIndexPage jmx file
           testPlan: testIndexPage.jmx
           #Customisable Conc Users and duration of test within the workflow
           concurrentUsers: 100             
