@@ -9,36 +9,27 @@ on:
 
 jobs:
   performance-test:
-    strategy:
-      matrix:
-      #Creates a matrix of 3 os.
-        os: [ubuntu-latest, macos-latest, windows-latest ]   
-    #github hosts a vm and test on all 3 os
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+                  
       - name: Set up JMeter
-        run: |  #Installs JMeter on each os as they have different commands
-          if [[ "${{ runner.os }}" == "Windows" ]]; then
-            choco install jmeter
-          elif [[ "${{ runner.os }}" == "macOS" ]]; then
-            brew install jmeter
-          else
-            sudo apt install jmeter
-          fi
-
-
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update -qy
+          sudo apt-get install -qy jmeter
+          
       - name: Run JMeter performance test
-        uses: apache/actions/jmeter@v1
+        # uses: QAInsights/PerfAction@f3959d0a69e7f23949add25d7e34a3ae167d6443
+        uses: QAInsights/PerfAction@v3.1
         with:
         #Use testIndexPage jmx file
-          testPlan: testIndexPage.jmx
+          test-plan-path: './testIndexPage.jmx'
           #Customisable Conc Users and duration of test within the workflow
-          concurrentUsers: 100             
-          duration: 10
+          #concurrentUsers: 100             
+          #duration: 10
 
       - name: Upload JMeter test results
         uses: actions/upload-artifact@v3
