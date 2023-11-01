@@ -80,7 +80,7 @@
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename"></stringProp>
+            <stringProp name="filename">jmeter-results.csv</stringProp>
           </ResultCollector>
           <hashTree/>
         </hashTree>
