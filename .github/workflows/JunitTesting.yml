@@ -34,4 +34,4 @@ jobs:
     # Run Junit Tests
     - name: Run JUnit Tests
       # Run all the unit test classes.
-      run: mvn test
+      run: mvn -f ./mavenproject/pom.xml test
