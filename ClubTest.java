@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ClubTest {
 
     @Test
-    void shouldCreateClubSuccessfully() {
+    void CreateClub() {
         // Arrange
         int clubId = 1;
         String clubName = "Donegal Club";
