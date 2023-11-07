@@ -30,9 +30,9 @@ Our product will be delivered using an Agile methodology that embraces the DevOp
 - Week 4 Scrum Master - Jack Mac Intyre L00158710
 - Week 5 Scrum Master - Andrae Tuliao L00159024 
 - Week 6 Scrum Master - Daniel Gallagher L00158616
-- Week 7 Scrum Master - Shane Mc Shane L00159116
+- Week 7 Scrum Master - Jakub Piascik L00166413
 - Week 8 Scrum Master - Damian Kos L00166003
-- Week 9 Scrum Master - Jakub Piascik L00166413
+- Week 9 Scrum Master - Shane Mc Shane L00159116
 - Week 10 Scrum Master - Ivan Bibat L00167791
 - Week 11 Scrum Master - Malachy Mc Innes L00169436
 
