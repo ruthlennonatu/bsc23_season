@@ -1,14 +1,15 @@
 # Damian Kos
-# 25th October 2023
 
 name: Junit Testing
 
 on:
   push:
     branches:
+      - main
       - dev
   pull_request:
     branches:
+      - main
       - dev
 
 jobs:
