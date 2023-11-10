@@ -1,0 +1,27 @@
+name: Site Security Analysis
+on:
+  push:
+    branches: 
+      - dev
+      - main
+    
+  pull_request:
+    branches: 
+      - dev
+      - main
+
+  workflow_dispatch:
+  
+permissions: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:     
+    - name: ZAP Baseline Scan
+  
+      uses: zaproxy/action-baseline@v0.10.0
+      
+      with:
+        target: "https://WEBSITELINK.com/"

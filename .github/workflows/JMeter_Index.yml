@@ -1,0 +1,38 @@
+name: JMeter Index
+#Runs on pushes to dev and main
+on:
+  push:
+    branches:
+      - dev
+      - main
+
+
+jobs:
+  performance-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+                  
+      - name: Set up JMeter
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update -qy
+          sudo apt-get install -qy jmeter
+          
+      - name: Run JMeter performance test
+        # uses: QAInsights/PerfAction@f3959d0a69e7f23949add25d7e34a3ae167d6443
+        uses: QAInsights/PerfAction@v3.1
+        with:
+        #Use testIndexPage jmx file
+          test-plan-path: './testIndexPage.jmx'
+          #Customisable Conc Users and duration of test within the workflow
+          #concurrentUsers: 100             
+          #duration: 10
+
+      - name: Upload JMeter test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: jmeter-test-results
+          path: jmeter-results.csv
