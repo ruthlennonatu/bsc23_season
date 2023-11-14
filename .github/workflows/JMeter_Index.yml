@@ -12,9 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+        #Downloads github repo onto the VM
       - name: Checkout code
         uses: actions/checkout@v3
-                  
+        
+         #Installs JMeter on the ubuntu VM         
       - name: Set up JMeter
         if: runner.os == 'Linux'
         run: |
@@ -25,12 +27,10 @@ jobs:
         # uses: QAInsights/PerfAction@f3959d0a69e7f23949add25d7e34a3ae167d6443
         uses: QAInsights/PerfAction@v3.1
         with:
-        #Use testIndexPage jmx file
+        #Use testIndexPage jmx file from github repo
           test-plan-path: './testIndexPage.jmx'
-          #Customisable Conc Users and duration of test within the workflow
-          #concurrentUsers: 100             
-          #duration: 10
-
+          
+      #Uploads a csv file in a zip folder once action is completed
       - name: Upload JMeter test results
         uses: actions/upload-artifact@v3
         with:
