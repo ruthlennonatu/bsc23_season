@@ -24,7 +24,7 @@ jobs:
     # Uses the GitHub Actions checkout action to get the repository code.
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2.4.4
+      uses: actions/checkout@v2
 
     # Step to set up the Java Development Kit and specify the version
     - name: Set up JDK
