@@ -1,4 +1,9 @@
+# Ivan Bibat
+#GitHub Actions Workflow for Web Security Analysis
+
 name: Site Security Analysis
+
+# Event Trigger which pushes/pull requests to branches 'main' and 'dev' 
 on:
   push:
     branches: 
@@ -10,11 +15,13 @@ on:
       - dev
       - main
 
-  workflow_dispatch:
+
   
 permissions: read
 
+
 jobs:
+  #Identifies the OS that the Workflow runs on.
   build:
     runs-on: ubuntu-latest
     
