@@ -2,33 +2,22 @@
 
 ## Reporting Potential Security Issues
 
-If you have encountered a potential security vulnerability in this project, 
-Please report this to us at <bsc23season@atu.ie>. We will work 
-with you to resolve the issue, verify the vulnerability, and patch it.
+If you discover a potential security vulnerability in our project, please inform us at bsc23season@atu.ie. We are committed to collaborating with you to investigate the issue, confirm the vulnerability, and implement a solution.
 
-When reporting issues to us, please provide the following information:
+When alerting us, kindly include these details:
 
-- Component(s) affected
-- A description indicating how to reproduce the issue
-- A summary of the security vulnerability and impact
+Affected component(s)
+Steps to reproduce the issue
+An overview of the security vulnerability and its potential impact
+We ask that you initially reach out through the provided email, allowing the project team to address and rectify the vulnerability before it becomes publicly known. This approach helps safeguard our users by enabling them to update or upgrade their applications as necessary.
 
-We request that you contact us via the email address above and give the
-project contributors a chance to resolve the vulnerability and issue a new
-release prior to any public exposure; this helps protect the project's
-users, and provides them with a chance to upgrade and/or update in order to
-protect their applications.
 
 ## Policy
 
-If we verify a reported security vulnerability, our policy is:
+Upon confirmation of a security vulnerability, our response protocol is as follows:
 
-- We will patch the current release branch, as well as the immediate prior minor
-  release branch.
+- We will apply fixes to both the current and the directly preceding minor release branches.
 
-- After patching the release branches, we will immediately issue new security
-  fix releases for each patched release branch.
+- Following the fixes, we will promptly release updated security versions for each branch that has been patched.
 
-- A security advisory will be released on the project website detailing the
-  vulnerability, as well as recommendations for end-users to protect themselves.
-  Security advisories will be listed at https://bsc23season.org/security/advisories.
-  as well as via a [feed](https://bsc23season.org/security/feed)
+- We will publish a security advisory on our project's website, which will detail the nature of the vulnerability and offer guidance for users to protect themselves. These advisories will be accessible at https://bsc23season.org/security/advisories and through a feed.
