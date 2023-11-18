@@ -31,6 +31,6 @@ jobs:
       - name: Upload JaCoCo report to Codecov
         uses: codecov/codecov-action@v3
         with:
-          token: ${{ secrets.CODECOV_TOKEN=244745f1-f6fc-486d-a978-f652d51dd2aa }}
+          token: ${{ secrets.CODECOV_TOKEN }}
           file: ./target/jacoco-xml/jacoco.xml
           fail_ci: false
