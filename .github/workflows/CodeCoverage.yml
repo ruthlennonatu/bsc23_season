@@ -18,13 +18,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set working directory
-        working-directory: mavenproject
-
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
           java-version: 11 
 
       - name: Generate JaCoCo report
-        run: mvn jacoco:report
+        run: mvn -f mavenproject/pom.xml jacoco:report
