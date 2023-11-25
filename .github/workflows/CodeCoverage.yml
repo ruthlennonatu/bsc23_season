@@ -19,6 +19,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Set working directory to mavenproject directory
+      - name: Set working directory
+        working-directory: mavenproject
+        
       # Step to set up the Java Development Kit and specify the version
       - name: Set up JDK
         uses: actions/setup-java@v1
