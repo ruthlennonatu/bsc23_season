@@ -16,13 +16,15 @@
             <version>4.13.2</version>
         </dependency>
     </dependencies>
-         
-<plugin>
-         <groupId>org.jacoco</groupId>
-         <artifactId>jacoco-maven-plugin</artifactId>
-         <version>0.8.7</version>
-         <executions>
-                  <execution>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.7</version>
+                <executions>
+                    <execution>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
@@ -34,6 +36,8 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
-         </executions>
-</plugin>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
