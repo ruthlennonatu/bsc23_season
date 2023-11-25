@@ -25,3 +25,9 @@ jobs:
 
       - name: Generate JaCoCo report
         run: mvn -f mavenproject/pom.xml jacoco:report
+
+      - name: Upload JaCoCo coverage report as a workflow artifact
+        uses: actions/upload-artifact@v3
+        with: 
+          name: jacoco-report
+          path: target/site/jacoco/
