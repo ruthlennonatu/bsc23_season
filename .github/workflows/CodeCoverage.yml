@@ -14,16 +14,13 @@ jobs:
   build:
     runs-on: ubuntu-latest 
 
-    # Step to checkout code from the repository
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Set working directory to mavenproject directory
       - name: Set working directory
         working-directory: mavenproject
-        
-      # Step to set up the Java Development Kit and specify the version
+
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
@@ -31,10 +28,3 @@ jobs:
 
       - name: Generate JaCoCo report
         run: mvn jacoco:report
-
-      - name: Upload JaCoCo report to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./target/jacoco-xml/jacoco.xml
-          fail_ci: false
