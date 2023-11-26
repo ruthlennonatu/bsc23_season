@@ -27,4 +27,4 @@ jobs:
         run: mvn clean verify
 
       - name: Generate Jacoco Reports
-        run: mvn jacoco:report
+        run: mvn -f pom.xml jacoco:report
