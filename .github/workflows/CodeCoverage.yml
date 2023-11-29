@@ -1,0 +1,30 @@
+name: Code Coverage
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11 
+
+      - name: Build with Jacoco
+        run: mvn clean verify
+
+      - name: Generate Jacoco Reports
+        run: mvn -f pom.xml jacoco:report

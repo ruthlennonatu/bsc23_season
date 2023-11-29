@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Captcha</h3>
+
+<form action="">
+  <label for="captcha">Please Enter the Captcha:</label><br>
+  <input type="text" id="Input" name="Input"><br>
+  <p id="captchaText"></p>
+  <input type="submit" value="Submit">
+</form> 
+
+<script>
+    //Generate random captcha using numbers and alphabet (including capital letters)
+    function generateCaptcha() {
+    var chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var captcha = '';
+    //length of captcha
+    for (var i = 0; i < 6; i++) {
+        captcha += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return captcha;
+}
+
+//display captcha in the page
+document.getElementById('captchaText').innerText = generateCaptcha();
+
+//check captcha on submit
+document.querySelector('form').addEventListener('submit', function(event) {
+    //prevent form submission if incorrect captcha entered
+    event.preventDefault();
+    //get user input
+    var userInput = document.getElementById('Input').value;
+    //get captcha text
+    var captcha = document.getElementById('captchaText').innerText;
+    if (userInput === captcha) {
+        alert('Captcha is correct');
+    } else {
+        alert('Captcha is incorrect');
+    }
+});
+</script>
+
+</body>
+</html>
