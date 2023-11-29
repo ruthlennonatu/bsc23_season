@@ -1,7 +1,7 @@
 # Ivan Bibat
 #GitHub Actions Workflow for Web Security Analysis
 
-name: Site Security Analysis
+name: ZAP Site Security Scan
 
 # Event Trigger which pushes/pull requests to branches 'main' and 'dev' 
 on:
@@ -15,20 +15,45 @@ on:
       - dev
       - main
 
+  # Needed to perform the workflow manually in GitHub Actions
+  workflow_dispatch:
 
-  
-permissions: read
 
 
 jobs:
-  #Identifies the OS that the Workflow runs on.
+  #Runs job 'build' which identifies the OS that the Workflow runs on.
   build:
+
+    # The type which the job 'build' will run on
     runs-on: ubuntu-latest
+    name: Sanity check git actions
     
-    steps:     
-    - name: ZAP Baseline Scan
-  
-      uses: zaproxy/action-baseline@v0.10.0
-      
-      with:
-        target: "https://WEBSITELINK.com/"
+    # Defines the steps that will be completed in relation to the job.
+    steps:    
+      #  Checks out the repository so that the job can access it
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Check if working in github actions
+        run: echo No Error.
+     
+
+  scans:
+    # The type which the job 'scans' will run on
+    runs-on: ubuntu-latest
+    name: ZAP Scan
+
+    steps:
+      #  Checks out the repository so that the job can access it
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Log cd
+        run: echo ${pwd}
+
+      - name: Pull ZAP OWASP image
+        run: docker pull owasp/zap2docker-weekly
+        
+      - name: Run ZAP API Scan
+        run: 
+          sudo docker run -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-weekly zap-api-scan.py -t openapi.json -f openapi -c api-scan.conf
