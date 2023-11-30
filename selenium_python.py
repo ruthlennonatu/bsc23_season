@@ -1,12 +1,29 @@
+'''
+This script runs through the login.html & homepage.html webpages 
+and verifies that they are still working as 
+expected with the expected output of "Hello World" printed to console.
+
+
+
+'''
+
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from pathlib import Path
 import os
 
 driver = webdriver.Chrome()
-print(f"Directory Path: {Path().absolute()}\login.html")
+print(f"Directory Path: {Path().absolute()}\\bsc23_season\login.html")
 
-driver.get(f"{Path().absolute()}\login.html")
+
+try:
+    path = f"{Path().absolute()}\\bsc23_season\login.html"
+
+    driver.get(path)
+except:
+    path = path.replace("\\", "/")
+    driver.get(path)
 
 title = driver.title
 
