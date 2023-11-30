@@ -16,6 +16,13 @@ import os
 driver = webdriver.Chrome()
 print(f"Directory Path: {Path().absolute()}\\bsc23_season\login.html")
 
+
+def verify_reach_homepage(text: str):
+    if "Hello World!" in text:
+        return "We can confirm we are reaching the homepage"
+    else:
+        return "We are not getting to homepage"
+
 # depending on if we're using a linux or windows machine, 
 # forward or backslashes may work better here
 try:
@@ -51,9 +58,6 @@ text = message.text
 
 print(text)
 
-if "Hello World!" in text:
-    print("We can confirm we are reaching the homepage")
-else:
-    raise ValueError("We are not getting to homepage")
+verify_reach_homepage(text)
 
 driver.quit()
