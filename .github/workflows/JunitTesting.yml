@@ -1,9 +1,7 @@
 # Damian Kos
-# GitHub Actions workflow for Junit Testing
 
 name: Junit Testing
 
-# Triggers on push to main or dev branches and pull requests to main or dev.
 on:
   push:
     branches:
@@ -14,36 +12,27 @@ on:
       - main
       - dev
 
-      
-# Specifies the operating system for the job (Ubuntu in this case).
 jobs:
   build:
     runs-on: ubuntu-latest 
 
     # Step to checkout code from the repository
-    # Uses the GitHub Actions checkout action to get the repository code.
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
     # Step to set up the Java Development Kit and specify the version
     - name: Set up JDK
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v1
       with:
         java-version: 11 
-        distribution: 'adopt'
-
 
     # Build the Java Project
     # The mvn clean package command clears the target directory.
     # - name: Build 
     #   run: mvn clean package
-    
-    # This section is currently commented because it was causing the action to fail, but it should build the Java project using Maven.
-  
-
 
     # Run Junit Tests
     - name: Run JUnit Tests
-      # Executes Maven to run JUnit tests using the specified POM file (pom.xml) in the 'mavenproject' directory.
-      run: mvn -f ./mavenproject/pom.xml test
+      # Run all the unit test classes.
+      run: mvn -f pom.xml test
