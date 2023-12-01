@@ -36,3 +36,9 @@ jobs:
     - name: Run JUnit Tests
       # Run all the unit test classes.
       run: mvn test
+
+
+    - name: JavaDoc
+      #run javadoc command
+      run: mvn javadoc:javadoc
+    
