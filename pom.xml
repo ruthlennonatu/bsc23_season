@@ -8,6 +8,12 @@
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
+
+    <properties>
+         <maven.compiler.source>6</maven.compiler.source>
+         <maven.compiler.target>1.6</maven.compiler.target>
+    </properties>
+         
     <dependencies>
         <!-- Your project dependencies here -->
         <dependency>
@@ -65,11 +71,7 @@
                     </execution>
                 </executions>
             </plugin>
-
-         <properties>
-                  <maven.compiler.source>6</maven.compiler.source>
-                  <maven.compiler.target>1.6</maven.compiler.target>
-         </properties>
+  
                  
         </plugins>
     </build>
