@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.myproject</groupId>
-    <artifactId>myproject</artifactId>
+    <artifactId>bsc23_season</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
@@ -15,7 +15,18 @@
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.7</version>
+        </dependency>
     </dependencies>
+
+
+   
+
 
     <build>
         <plugins>
@@ -38,6 +49,22 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>generate-javadoc</id>
+                        <phase>site</phase>                
+                        <goals>
+                            <goal>javadoc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 </project>
