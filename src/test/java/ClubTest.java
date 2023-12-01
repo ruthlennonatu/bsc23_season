@@ -1,8 +1,9 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class ClubTest {
+public class ClubTest {
 
     @Test
     void CreateClub() {
@@ -14,7 +15,7 @@ class ClubTest {
 
         // Act
         Club club = new Club(clubId, clubName, description, location);
-        club.create();
+        assertTrue(club.create()); // Verify club creation
 
         // Assert
         assertEquals(clubId, club.getClubId());

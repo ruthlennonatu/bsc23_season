@@ -1,0 +1,46 @@
+@options
+@argfile
+-encoding
+'Cp1252'
+-protected
+-sourcepath
+'C:/Users/damia/Documents/bsc23_season/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/damia/Documents/bsc23_season/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'bsc23_season 1.0.0 API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/damia/Documents/bsc23_season/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'bsc23_season 1.0.0 API'
+'C:/Users/damia/Documents/bsc23_season/src/main/java/Club.java'
+'C:/Users/damia/Documents/bsc23_season/src/main/java/Payment.java'
+C:\Users\damia\Documents\bsc23_season\src\main\java\Club.java = 1701461157411
+C:\Users\damia\Documents\bsc23_season\src\main\java\Payment.java = 1701433541949
+C:\Users\damia\Documents\bsc23_season\src\main\java = 1701461719077
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\allclasses-frame.html = 1701464079710
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\allclasses-noframe.html = 1701464079712
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\Club.html = 1701464079608
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\constant-values.html = 1701464079659
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\deprecated-list.html = 1701464079706
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\help-doc.html = 1701464079723
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\index-all.html = 1701464079699
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\index.html = 1701464079716
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\overview-tree.html = 1701464079690
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\package-frame.html = 1701464079634
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\package-list = 1701464079629
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\package-summary.html = 1701464079645
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\package-tree.html = 1701464079650
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\package-use.html = 1701464079684
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\Payment.html = 1701464079627
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\script.js = 1701464079732
+C:\Users\damia\Documents\bsc23_season\target\site\apidocs\stylesheet.css = 1701464079729
