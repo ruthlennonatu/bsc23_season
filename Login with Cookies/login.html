@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            // Prevent default form submission
+            event.preventDefault();
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+            // Send POST request to /login route
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    // Tell the server we are sending JSON data 
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({username: username, password: password}),
+            })
+            // Parse the response as JSON
+            .then(response => response.json())
+            .then(data => {
+                if (data.membership) {
+                    alert('Logged in with ' + data.membership + ' membership');
+                } else {
+                    alert('Invalid Name or Password');
+                }
+            })
+            .then(data => {
+            if (data.membership) {
+            alert('Logged in with ' + data.membership + ' membership');
+            // Change the navbar based on the membership type
+            var navbar = document.getElementById('navbar');
+            // if elite member show elite tab
+            if (data.membership == 'elite') {
+            navbar.innerHTML = '<a href="/elite">Elite Page</a>'
+            // if platinum member show platinum tab
+            } else if (data.membership == 'platinum') {
+               navbar.innerHTML = '<a href="/platinum">Platinum Page</a>';
+            }
+            } else {
+            //If neither or not logged in, show login tab or error on page 
+            alert('Invalid Access Level');
+            }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+            });
+    </script>
+</body>
+</html>
