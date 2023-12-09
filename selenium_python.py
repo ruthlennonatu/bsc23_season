@@ -29,7 +29,7 @@ def verify_reach_homepage(text: str):
 # depending on if we're using a linux or windows machine, 
 # forward or backslashes may work better here
 try:
-    path = f"{Path().absolute()}\\bsc23_season\login.html"
+    path = f"{Path().absolute()}\\login.html"
 
     driver.get(path)
 except:

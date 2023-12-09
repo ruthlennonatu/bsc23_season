@@ -12,7 +12,7 @@ our DevOps pipeline, it tests the expected results upon reaching the home page
 We would expect one failure and two passes here.
 '''
 def pydoc_gen():
-    documentation = pydoc.writedoc("TestClass")
+    documentation = pydoc.writedoc("test_entry_pass")
     print(documentation)
 
 class TestClass:
