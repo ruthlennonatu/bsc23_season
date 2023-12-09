@@ -11,8 +11,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from pathlib import Path
 import os
+from selenium.webdriver.chrome.options import Options
 
-driver = webdriver.Chrome()
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--disable-gpu')
+driver = webdriver.Chrome(options=chrome_options)
 print(f"Directory Path: {Path().absolute()}\\bsc23_season\login.html")
 
 
