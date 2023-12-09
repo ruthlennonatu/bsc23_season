@@ -22,10 +22,21 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-        
-    - name: Setup ChromeDriver
+
+    - name: Install Chrome browser
+      run: sudo apt-get update && sudo apt-get install -y google-chrome-stable
+
+    - name: Get latest ChromeDriver version
+      id: get_version
       run: |
-        wget https://chromedriver.storage.googleapis.com/$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
+        CHROMEDRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+        echo "Latest ChromeDriver version: $CHROMEDRIVER_VERSION"
+        echo "::set-output name=chromedriver_version::$CHROMEDRIVER_VERSION"
+
+    - name: Download ChromeDriver
+      run: |
+        CHROMEDRIVER_VERSION=${{ steps.get_version.outputs.chromedriver_version }}
+        wget https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip
         unzip chromedriver_linux64.zip
         sudo mv chromedriver /usr/local/bin/chromedriver
         sudo chmod +x /usr/local/bin/chromedriver
