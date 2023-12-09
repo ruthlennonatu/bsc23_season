@@ -4,7 +4,6 @@ and verifies that they are still working as
 expected with the expected output of "Hello World" printed to console.
 
 
-
 '''
 
 
@@ -17,6 +16,10 @@ driver = webdriver.Chrome()
 print(f"Directory Path: {Path().absolute()}\\bsc23_season\login.html")
 
 
+'''
+This function verifies that the user gets to the homepage
+of our website
+'''
 def verify_reach_homepage(text: str):
     if "Hello World!" in text:
         return "We can confirm we are reaching the homepage"

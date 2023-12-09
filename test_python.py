@@ -1,15 +1,24 @@
+"""These are the tests that are automatically kicked off by Selenium
+"""
+
 
 
 from selenium_python import verify_reach_homepage
-import pytest
+import pytest, pydoc
 
 '''
 This is part of the pytest suite we have implemented for
 our DevOps pipeline, it tests the expected results upon reaching the home page
 We would expect one failure and two passes here.
 '''
-class TestClass:
+def pydoc_gen():
+    documentation = pydoc.writedoc("TestClass")
+    print(documentation)
 
+class TestClass:
+    """Testing the pydoc module
+    
+    """
     # we should pass
     def test_entry_bad(value):
         text = "No hello world here"
@@ -24,3 +33,6 @@ class TestClass:
     def test_entry_pass(value):
         text = "Hello World!"
         assert verify_reach_homepage(text) == "We can confirm we are reaching the homepage"
+
+if __name__ == "__main__":
+    pydoc_gen()
