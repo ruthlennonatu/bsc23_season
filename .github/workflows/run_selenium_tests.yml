@@ -25,9 +25,7 @@ jobs:
 
     - name: Install Chrome browser version 114
       run: |
-        wget https://dl.google.com/linux/direct/google-chrome-stable_114.0.0_amd64.deb
-        sudo dpkg -i google-chrome-stable_114.0.0_amd64.deb
-        sudo apt-get -f install -y
+        yum install -y https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-$114-1.x86_64.rpm
 
     - name: Get latest ChromeDriver version
       id: get_version
