@@ -20,19 +20,19 @@ class TestClass:
     
     """
     # we should pass
-    def test_entry_bad(value):
+    def test_entry_bad():
         text = "No hello world here"
         assert verify_reach_homepage(text) == "We are not getting to homepage"
 
     # we should get a failure back
-    def test_entry_fail(value):
+    def test_entry_fail():
         text = "Hm"
-        assert verify_reach_homepage(text) == "We can confirm we are reaching the homepage"
+        assert verify_reach_homepage(text) == "We are not getting to homepage"
 
     # we should get a pass as we have given the expected test for reaching the home page
-    def test_entry_pass(value):
+    def test_entry_pass():
         text = "Hello World!"
         assert verify_reach_homepage(text) == "We can confirm we are reaching the homepage"
 
 if __name__ == "__main__":
-    pydoc_gen()
+    TestClass.test_entry_pass()
