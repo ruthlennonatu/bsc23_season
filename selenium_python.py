@@ -6,8 +6,12 @@ from selenium.webdriver.firefox.options import Options
 
 geckodriver_path= "/usr/local/bin/geckodriver"
 
-firefox_options = Options()
+firefox_options = webdriver.FirefoxOptions()
 firefox_options.headless = True
+
+# Replace '/path/to/geckodriver' with the actual path
+# geckodriver_path = "/path/to/geckodriver"
+
 driver = webdriver.Firefox(executable_path=geckodriver_path, options=firefox_options)
 print(f"Directory Path: {Path().absolute()}\\login.html")
 
