@@ -48,5 +48,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt  # If you have dependencies
 
+    - name: Print contents of the root directory
+      run: ls -al /
+
     - name: Run Python script
       run: python test_python.py
