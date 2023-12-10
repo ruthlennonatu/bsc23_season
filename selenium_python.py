@@ -34,6 +34,7 @@ try:
 
     driver.get(path)
 except:
+    path = os.path.join(Path().absolute(), "login.html")
     path = path.replace("\\", "/")
     driver.get(path)
 
