@@ -11,6 +11,10 @@ options = Options()
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 
+#Currently, on Selenium 4.15 and Ubuntu 23.10, this works after replacing Options with webdriver.FirefoxOptions, 
+# and Service with webdriver.FirefoxService
+
+
 geckodriver_path = "/snap/bin/geckodriver"  # specify the path to your geckodriver
 driver_service = Service(executable_path=geckodriver_path)
 
