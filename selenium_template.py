@@ -45,13 +45,17 @@ html_file_path = "login.html"
 #with open('./GitHub_Action_Results.txt', 'w') as f:
 #    f.write(f"This was written with a GitHub action {driver.title}")
 
-current_directory = os.getcwd()
+#current_directory = os.getcwd()
 
-full_path = os.path.join(current_directory, html_file_path)
+github_workspace = os.getenv("GITHUB_WORKSPACE")
 
-print(full_path)
+local_html_path = f"file://{github_workspace}/login.html"
 
-driver.get(full_path)
+# full_path = os.path.join(current_directory, html_file_path)
+
+print(local_html_path)
+
+driver.get(local_html_path)
 
 title = driver.title
 

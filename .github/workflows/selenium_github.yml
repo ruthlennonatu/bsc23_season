@@ -30,5 +30,13 @@ jobs:
         run: sudo apt-get install xvfb
 
       - name: Running the Python script
-        run: python selenium_template.py
+      # Navigate to the GitHub Actions workspace
+          
+        run: |
+        cd $GITHUB_WORKSPACE
+
+        # Print the current working directory (optional, for verification)
+        pwd
+        
+        python selenium_template.py
         
