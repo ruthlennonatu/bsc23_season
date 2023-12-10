@@ -27,6 +27,8 @@ options = [
     #'--remote-debugging-port=9222'
 ]
 
+# testing
+
 for option in options:
     chrome_options.add_argument(option)
 
