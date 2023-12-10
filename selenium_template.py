@@ -49,6 +49,8 @@ current_directory = os.getcwd()
 
 full_path = os.path.join(current_directory, html_file_path)
 
+print(full_path)
+
 driver.get(full_path)
 
 title = driver.title
