@@ -3,7 +3,7 @@
 
 
 
-from selenium_python import verify_reach_homepage
+from selenium_template import verify_reach_homepage
 import pytest, pydoc
 
 '''

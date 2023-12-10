@@ -32,6 +32,12 @@ options = [
 
 # testing
 
+def verify_reach_homepage(text: str):
+    if "Hello World!" in text:
+        return "We can confirm we are reaching the homepage"
+    else:
+        return "We are not getting to the homepage"
+
 for option in options:
     chrome_options.add_argument(option)
 
@@ -39,13 +45,6 @@ for option in options:
 driver = webdriver.Chrome(options = chrome_options)
 
 html_file_path = "login.html"
-
-# driver.get('http://github.com')
-#print(driver.title)
-#with open('./GitHub_Action_Results.txt', 'w') as f:
-#    f.write(f"This was written with a GitHub action {driver.title}")
-
-#current_directory = os.getcwd()
 
 github_workspace = os.getenv("GITHUB_WORKSPACE")
 
