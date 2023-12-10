@@ -22,7 +22,7 @@ driver = webdriver.Firefox(options=options, service=driver_service)
 
 #driver = webdriver.Firefox(executable_path=geckodriver_path, options=firefox_options)
 print(f"Directory Path: {Path().absolute()}\\login.html")
-
+path = ""
 def verify_reach_homepage(text: str):
     if "Hello World!" in text:
         return "We can confirm we are reaching the homepage"
@@ -34,6 +34,8 @@ try:
 
     driver.get(path)
 except:
+    
+    print(path)
     path = os.path.join(Path().absolute(), "login.html")
     path = path.replace("\\", "/")
     driver.get(path)
