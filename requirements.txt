@@ -1,3 +1,4 @@
 requests==2.26.0
 numpy==1.21.4
 selenium==4.16
+pytest==7.1.3

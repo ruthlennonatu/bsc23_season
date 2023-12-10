@@ -1,4 +1,4 @@
-name: Run Selenium On GitHub Action
+name: Run PytTest On GitHub Action
 on:
   push:
     branches:
