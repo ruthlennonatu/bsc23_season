@@ -27,12 +27,18 @@ jobs:
       with:
         java-version: 11 
 
-    # Build the Java Project
+    #Build the Java Project
     # The mvn clean package command clears the target directory.
-    # - name: Build 
-    #   run: mvn clean package
+    - name: Build 
+      run: mvn clean package
 
     # Run Junit Tests
     - name: Run JUnit Tests
       # Run all the unit test classes.
-      run: mvn -f pom.xml test
+      run: mvn test
+
+
+    - name: JavaDoc
+      #run javadoc command
+      run: mvn javadoc:javadoc
+    

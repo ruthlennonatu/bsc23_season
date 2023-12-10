@@ -1,6 +1,8 @@
 //Daniel Gallagher
 //Tester for Payment.java
 
+
+
 public class PaymentTester {
     public static void main(String[] args) {
         // Create a new Payment instance with specified amount, currency, and payment method

@@ -50,7 +50,7 @@ public class User {
     }
     
     // Method to handle user registration
-    public void register() {
+    public void create() {
         // Database URL, username, and password
         String url = "jdbc:mysql://localhost:3306/your_database"; // Update with the database details
         String dbUsername = "root"; // Update with the database username
@@ -113,4 +113,11 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    // public boolean create() {
+    //     return true;
+    // }
+
 }
+
+
