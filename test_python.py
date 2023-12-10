@@ -22,12 +22,12 @@ class TestClass:
     # we should pass
     def test_entry_bad(value):
         text = "No hello world here"
-        assert verify_reach_homepage(text) == "We are not getting to homepage"
+        assert verify_reach_homepage("No hello world here") == "We are not getting to the homepage"
 
     # we should get a failure back
     def test_entry_fail(value):
         text = "Hm"
-        assert verify_reach_homepage(text) == "We are not getting to homepage"
+        assert verify_reach_homepage("Hm") == "We are not getting to the homepage"
 
     # we should get a pass as we have given the expected test for reaching the home page
     def test_entry_pass(value):
