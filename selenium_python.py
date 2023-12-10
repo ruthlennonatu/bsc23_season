@@ -4,9 +4,11 @@ from pathlib import Path
 import os
 from selenium.webdriver.firefox.options import Options
 
+geckodriver_path= "/usr/local/bin/geckodriver"
+
 firefox_options = Options()
 firefox_options.headless = True
-driver = webdriver.Firefox(options=firefox_options)
+driver = webdriver.Firefox(executable_path=geckodriver_path, options=firefox_options)
 print(f"Directory Path: {Path().absolute()}\\login.html")
 
 def verify_reach_homepage(text: str):
