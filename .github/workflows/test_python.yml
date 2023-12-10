@@ -1,4 +1,5 @@
-name: Run PytTest On GitHub Action
+name: Run Pytest
+
 on:
   push:
     branches:
@@ -8,35 +9,25 @@ on:
     branches:
       - main
       - dev
+
 jobs:
-  scrape:
+  test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checking out repo
-        uses: actions/checkout@v3
-      - name: Setting up Python
-        uses: actions/setup-python@v4
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
-      - name: Installing package list
-        run: apt list --installed    
-      - name: Removing previous chrome instances on runner 
-        run: sudo apt purge google-chrome-stable  
-        
-       # Need to fetch reqs if needed
-      - name: Installing all necessary packages
-        run: pip install chromedriver-autoinstaller selenium pyvirtualdisplay
-      - name: Install xvfb
-        run: sudo apt-get install xvfb
+          python-version: 3.8
 
-      - name: Running the Python script
-      # Navigate to the GitHub Actions workspace
-          
+      - name: Install dependencies
         run: |
-          cd $GITHUB_WORKSPACE
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Install your project dependencies
 
-          # Print the current working directory (optional, for verification)
-          pwd
-        
-          python test_python.py
-        
+      - name: Run Pytest
+        run: |
+          python -m pytest
