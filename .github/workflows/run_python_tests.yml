@@ -49,7 +49,10 @@ jobs:
         pip install -r requirements.txt  # If you have dependencies
 
     - name: Print contents of the root directory
-      run: ls -al /
+      run: ls -al /usr
+
+    - name: Print contents of the root directory
+      run: ls -al /snap
 
     - name: Run Python script
       run: python test_python.py
