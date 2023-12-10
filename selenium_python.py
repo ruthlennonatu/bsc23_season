@@ -5,7 +5,7 @@ import os
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.chrome.service import Service
-geckodriver_path= "/usr/local/bin/geckodriver"
+geckodriver_path= r"/usr/local/bin/geckodriver"
 
 options = Options()
 options.headless = True
@@ -13,6 +13,7 @@ driver = webdriver.Firefox(options=options)
 
 service = Service(executable_path=geckodriver_path)
 options = webdriver.FirefoxOptions()
+options.binary = r'/usr/bin/firefox'
 driver = webdriver.Firefox(service=service, options=options)
 
 #driver = webdriver.Firefox(executable_path=geckodriver_path, options=firefox_options)
