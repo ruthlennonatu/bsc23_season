@@ -8,12 +8,13 @@ from selenium.webdriver.chrome.service import Service
 #geckodriver_path= r"/usr/local/bin/geckodriver"
 
 options = Options()
-options.headless = True
-driver = webdriver.Firefox(options=options)
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
 
-service = Service(executable_path="/snap/bin/geckodriver")
-options = webdriver.FirefoxOptions()
-driver = webdriver.Firefox(service=service, options=options)
+geckodriver_path = "/snap/bin/geckodriver"  # specify the path to your geckodriver
+driver_service = Service(executable_path=geckodriver_path)
+
+driver = webdriver.Firefox(options=options, service=driver_service)
 
 #driver = webdriver.Firefox(executable_path=geckodriver_path, options=firefox_options)
 print(f"Directory Path: {Path().absolute()}\\login.html")
