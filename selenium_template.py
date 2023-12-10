@@ -38,18 +38,18 @@ for option in options:
     
 driver = webdriver.Chrome(options = chrome_options)
 
+html_file_path = "login.html"
+
 # driver.get('http://github.com')
 #print(driver.title)
 #with open('./GitHub_Action_Results.txt', 'w') as f:
 #    f.write(f"This was written with a GitHub action {driver.title}")
 
-try:
-    path = os.path.join(Path().absolute(), "login.html")
+current_directory = os.getcwd()
 
-    driver.get(path)
-except:
-    path = path.replace("\\", "/")
-    driver.get(path)
+full_path = os.path.join(current_directory, html_file_path)
+
+driver.get(full_path)
 
 title = driver.title
 
