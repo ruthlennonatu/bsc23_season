@@ -70,6 +70,7 @@ Regex for cleansing and validation of data before sending to the database.
 # Useful Links
  - Project Slack: https://app.slack.com/client/T0419S2HV9B/C060GTFG3UM
  - GitHub: https://github.dev/ruthlennonatu/bsc23_season
+ - Microsoft Teams: https://teams.microsoft.com/l/team/19%3aRKwbXGevQG5Yr8-jyO9W5gwfTRC73AZKB17ZgtC3CjU1%40thread.tacv2/conversations?groupId=306a4a47-4920-477b-aab9-30d9e681772c&tenantId=47855545-00bb-4800-a65f-e79104ec0fc4
 
 # Questions
 - Does the application need to be created for a mobile environment as well as for desktop?
